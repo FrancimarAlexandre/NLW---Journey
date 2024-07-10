@@ -26,7 +26,7 @@ class TripsRepository:
 
         self.__conn.commit()
         
-    def find__trip_by_id(self,trip_id:str) -> Tuple:
+    def find_trip_by_id(self,trip_id:str) -> Tuple:
         cursor = self.__conn.cursor()
         cursor.execute(
         """
