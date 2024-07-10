@@ -5,11 +5,12 @@ class LinksRepository:
     def __init__(self, conn: Connection) -> None:
         self.__conn = conn
     
-    def generat_link(self,links_info: Dict):
+    def registry_link(self,links_info: Dict):
         cursor = self.__conn.cursor()
         cursor.execute(
             '''
             INSERT INTO links
+              (id,trip_id,link,title)
             VALUES
               (?,?,?,?)
             ''',(
@@ -29,5 +30,5 @@ class LinksRepository:
         """,(trip_id,)
         )
 
-        trip = cursor.fetchall()
-        return trip
+        links = cursor.fetchall()
+        return links
