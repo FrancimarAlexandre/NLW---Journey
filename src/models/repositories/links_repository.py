@@ -11,11 +11,12 @@ class LinksRepository:
             '''
             INSERT INTO links
             VALUES
-              (?,?,?)
+              (?,?,?,?)
             ''',(
                 links_info['id'],
                 links_info['trip_id'],
                 links_info['link'],
+                links_info['title'],
             )
         )
         self.__conn.commit()

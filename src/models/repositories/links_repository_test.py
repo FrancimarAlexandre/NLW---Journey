@@ -14,7 +14,8 @@ def test_generat_links():
     links_trip = {
         "id": str(uuid.uuid4),
         "trip_id": trip_id,
-        "link":"test.com/confirm"
+        "link":"test.com/confirm",
+        "title":"teste_link",
     }
 
     links_to_generat_repository.generat_link(links_trip)
