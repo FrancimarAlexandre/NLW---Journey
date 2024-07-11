@@ -22,7 +22,7 @@ class LinksRepository:
         )
         self.__conn.commit()
 
-    def find__links_from_trip(self,trip_id:str) -> List[Tuple]:
+    def find_links_from_trip(self,trip_id:str) -> List[Tuple]:
         cursor = self.__conn.cursor()
         cursor.execute(
         """
